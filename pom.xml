@@ -67,7 +67,7 @@
 
   <properties>
     <javaModuleName>io.netty.contrib.template</javaModuleName>
-    <netty.version>5.0.0.Alpha3</netty.version>
+    <netty.version>4.1.90.Final</netty.version>
     <netty.build.version>29</netty.build.version>
     <project.scm.id>github</project.scm.id>
     <release.gpg.keyname />
@@ -251,28 +251,33 @@
     <profile>
       <id>leak</id>
       <properties>
-        <test.argLine>-Dio.netty5.leakDetectionLevel=paranoid -Dio.netty5.leakDetection.targetRecords=32 -Dio.netty5.buffer.lifecycleTracingEnabled=true -Dio.netty5.buffer.leakDetectionEnabled=true</test.argLine>
+        <test.argLine>-Dio.netty.leakDetectionLevel=paranoid -Dio.netty.leakDetection.targetRecords=32 -Dio.netty.buffer.lifecycleTracingEnabled=true -Dio.netty.buffer.leakDetectionEnabled=true</test.argLine>
       </properties>
     </profile>
   </profiles>
 
   <dependencies>
-    <dependency>
-      <groupId>io.netty</groupId>
-      <artifactId>netty5-buffer</artifactId>
-      <version>${netty.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>io.netty</groupId>
-      <artifactId>netty5-transport</artifactId>
-      <version>${netty.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>io.netty</groupId>
-      <artifactId>netty5-codec</artifactId>
-      <version>${netty.version}</version>
-    </dependency>
 
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-buffer</artifactId>
+      <version>${netty.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-transport</artifactId>
+      <version>${netty.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-codec</artifactId>
+      <version>${netty.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-handler</artifactId>
+      <version>${netty.version}</version>
+    </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>

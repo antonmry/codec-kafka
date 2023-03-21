@@ -6,3 +6,5 @@
 * Maven coordinates:
 ** `io.netty.contrib:netty-template:5.0.0.Final-SNAPSHOT`
 
+curl -v telnet://localhost:8007
+kcat -b localhost:8007 -t new_topic -P
